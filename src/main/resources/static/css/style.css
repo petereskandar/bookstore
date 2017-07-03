@@ -1,0 +1,28 @@
+body{
+	padding-bottom: 20px;
+}
+
+.navbar{
+	margin-bottom: 20px;
+}
+
+.box{
+	border: 1px solid red;
+}
+
+.container{
+	width: 90%;
+}
+
+hr{
+	border:none;
+	height: 1px;
+	color: #333;
+	background-color: #333;
+}
+
+.page-top{
+	height: 20px;
+	width: 100%;
+	background-color: #f46b42;
+}
