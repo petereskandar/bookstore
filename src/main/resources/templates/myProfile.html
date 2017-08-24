@@ -12,7 +12,7 @@
 		<div class="row" style="margin-bottom: -100px">
 			<div class="col-xs-8">
 				<h2 class="section-headline">
-					<h2 class="section-headline"><span th:text="${#strings.toUpperCase{user.username}}"></span></h2>
+					<!-- <h2 class="section-headline"><span th:text="${#strings.toUpperCase{user.username}}"></span></h2> -->
 				</h2>
 			</div>
 			<div class="col-xs-4">
@@ -41,50 +41,50 @@
 							<div class="panel panel-default" style="border: none;">
 								<div class="panel-body" style="background-color: #ededed; margin-top: 20px;">
 									<form th:action="@{/updateUserInfo}" method="post">
-										<input type="hidden" name="id" th:value="${user.id}">
+										<input type="hidden" name="id" th:value="${user.id}"/>
 										<div class="bg-info" th:if="${updateUserInfo}">User info updated.</div>
 										
 										<div class="form-group">
 											<div class="row">
 												<div class="col-xs-6">
 													<label for="firstName">First Name</label><input type="text" class="form-control"
-														id="firstName" name="firstName" th:value="${user.firstName}">
+														id="firstName" name="firstName" th:value="${user.firstName}"/>
 												</div>
 												<div class="col-xs-6">
 													<label for="lastName">Last Name</label><input type="text" class="form-control"
-														id="lastName" name="lastName" th:value="${user.lastName}">
+														id="lastName" name="lastName" th:value="${user.lastName}"/>
 												</div>
 											</div>
 										</div>
 										<div class="form-group">
 											<label for="userName">User Name</label>
 											<input type="text" class="form-control"
-												id="userName" name="userName" th:value="${user.userName}">
+												id="userName" name="userName" th:value="${user.username}"/>
 										</div>
 										<div class="form-group">
 											<label for="currentPassword">Current Password</label>
 											<input type="password" class="form-control"
-												id="currentPassword" name="currentPassword" th:value="${currentPassword}">
+												id="currentPassword" name="currentPassword" th:value="${currentPassword}"/>
 										</div>
 										<p style="color:#828282">Enter your current password to change the email address or password.</p>
 										
 										<div class="form-group">
 											<label for="email">Email address</label>
 											<input type="email" class="form-control"
-												id="email" name="email" th:value="${user.email}">
+												id="email" name="email" th:value="${user.email}"/>
 										</div>
 										<p style="color:#828282">Enter a valid email address.</p>
 										
 										<div class="form-group">
 											<label for="txtNewPassword">Password</label>
 											<input type="password" class="form-control"
-												id="txtNewPassword" name="txtNewPassword">
+												id="txtNewPassword" name="txtNewPassword"/>
 										</div>
 										
 										<div class="form-group">
 											<label for="txtConfirmPassword">Confirm Password</label>
 											<input type="password" class="form-control"
-												id="txtConfirmPassword">
+												id="txtConfirmPassword"/>
 										</div>
 										<p style="color:#828282">To change the current user password, enter the new password in both fields</p>
 										

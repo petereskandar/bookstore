@@ -29,6 +29,7 @@ public class User implements UserDetails {
 	@Column(name="id", nullable= false, updatable=false)
 	private long id;
 	private String username;
+
 	private String password;
 	private String firstName;
 	private String lastName;
@@ -87,6 +88,13 @@ public class User implements UserDetails {
 	public void setUserRoles(Set<UserRole> userRoles) {
 		this.userRoles = userRoles;
 	}
+	
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getUsername() {
+		return this.username;
+	}
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO Auto-generated method stub
@@ -94,11 +102,6 @@ public class User implements UserDetails {
 		userRoles.forEach(ur -> authorites.add(new Authority(ur.getRole().getName())));
 		
 		return authorites;
-	}
-	@Override
-	public String getUsername() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 	@Override
 	public boolean isAccountNonExpired() {

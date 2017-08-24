@@ -69,9 +69,9 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a>SHOPPING CART</a></li>
-						<li><a th:href="@{/login}">My Account</a></li>
-						<li><a th:href="@{/login}">My Account</a></li>
-						<li><a>LOGOUT</a></li>
+						<li><a sec:authorize="isAnonymous()" th:href="@{/login}">My Account</a></li>
+						<li><a sec:authorize="isAuthenticated()"  th:href="@{/myProfile}">My Account</a></li>
+						<li><a sec:authorize="isAuthenticated()"  th:href="@{/logout}">LOGOUT</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->

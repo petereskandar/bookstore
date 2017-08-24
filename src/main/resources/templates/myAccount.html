@@ -41,7 +41,8 @@
 						<div class="panel-group">
 							<div class="panel panel-default" style="border: none;">
 								<div class="panel-body" style="background-color: #ededed; margin-top: 20px;">
-									<form>
+									<div class="alert alert-info" role="alert" th:if="${emailSent}">An Email sent to your account</div>
+									<form th:action="@{/newUser}" method="post">
 										<div class="form-group">
 											<label for="newUserName">* UserName :</label>
 											<input required="required" type="text" class="form-control" id="newUserName" name="newUserName"/>
